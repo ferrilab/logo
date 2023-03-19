@@ -1,0 +1,159 @@
+<svg viewBox="-104 -104 208 208" xmlns="http://www.w3.org/2000/svg">
+  <g id="logo-square" class="sprocket-5">
+    <def>
+      <g id="chainring-base">
+        <path class="fg-trace fg-solid" d="
+          M 0 -80
+          A 80 80 0 0 1 0 80
+          A 80 80 0 0 1 0 -80
+          V -95
+          A 95 95 0 0 1 0 95
+          A 95 95 0 0 1 0 -95
+          Z
+          " />
+        <path class="bg-trace bg-solid" d="
+          M 0 -95
+          A 95 95 0 0 1 0 95
+          A 95 95 0 0 1 0 -95
+          V -104
+          A 104 104 0 0 1 0 104
+          A 104 104 0 0 1 0 -104
+          Z
+          " />
+      </g>
+      <g id="outer-tooth">
+        <path stroke-width="1" class="fg-trace fg-solid" style="transform: rotate(7.5deg);" d="
+          M -4 -100 a 1 1 0 0 1 8 0
+          l 2 10 h -12 l 2 -10
+          M 100 -4 a 1 1 0 0 1 0 8
+          l -10 2 v -12 l 10 2
+          M 4 100 a 1 1 0 0 1 -8 0
+          l -2 -10 h 12 l -2 10
+          M -100 4 a 1 1 0 0 1 0 -8
+          l 10 -2 v 12 l -10 -2
+          " />
+      </g>
+      <g id="outer-tooth-negative">
+        <path stroke-width="1" class="bg-trace bg-solid" style="transform: rotate(0deg);" d="
+          M -8 -98 a 8 8 0 0 0 16 0 Z
+          M 98 -8 a 8 8 0 0 0 0 16 Z
+          M 8 98 a 8 8 0 0 0 -16 0 Z
+          M -98 8 a 8 8 0 0 0 0 -16 Z
+          " />
+      </g>
+      <g id="inner-tooth">
+        <path class="fg-trace fg-solid" stroke-width="8" d="
+          M -12 -84 H 12 L 0 -72 Z
+          " />
+        <circle class="bg-solid" cy="-80" r="5.5" />
+      </g>
+    </def>
+
+    <g id="logo-main">
+      <!-- Fills the working area -->
+      <circle r="80" class="bg-trace bg-solid" />
+
+      <!-- Your logo goes here -->
+    </g>
+
+    <!-- Begins the chainring -->
+    <use href="#chainring-base" />
+
+    <!-- Fills the outward-facing spokes -->
+    <g id="outer-teeth">
+      <!-- These scoop out the edge of the chainring to make a nice rounded join -->
+      <use href="#outer-tooth-negative" />
+      <use href="#outer-tooth-negative" style="transform: rotate(15deg);" />
+      <use href="#outer-tooth-negative" style="transform: rotate(30deg);" />
+      <use href="#outer-tooth-negative" style="transform: rotate(45deg);" />
+      <use href="#outer-tooth-negative" style="transform: rotate(60deg);" />
+      <use href="#outer-tooth-negative" style="transform: rotate(75deg);" />
+      <!-- And these are the actual spokes -->
+      <use href="#outer-tooth" />
+      <use href="#outer-tooth" style="transform: rotate(15deg);" />
+      <use href="#outer-tooth" style="transform: rotate(30deg);" />
+      <use href="#outer-tooth" style="transform: rotate(45deg);" />
+      <use href="#outer-tooth" style="transform: rotate(60deg);" />
+      <use href="#outer-tooth" style="transform: rotate(75deg);" />
+    </g>
+
+    <!-- Pentagon (matching original Rust logo) -->
+    <g id="inner-teeth-5">
+      <use href="#inner-tooth" />
+      <use href="#inner-tooth" style="transform: rotate(72deg);" />
+      <use href="#inner-tooth" style="transform: rotate(144deg);" />
+      <use href="#inner-tooth" style="transform: rotate(-72deg);" />
+      <use href="#inner-tooth" style="transform: rotate(-144deg);" />
+    </g>
+
+    <!-- Wide Hexagon (allows full use of the x=0 Y-axis) -->
+    <g id="inner-teeth-6">
+      <use href="#inner-tooth" style="transform: rotate(30deg);" />
+      <use href="#inner-tooth" style="transform: rotate(90deg);" />
+      <use href="#inner-tooth" style="transform: rotate(150deg);" />
+      <use href="#inner-tooth" style="transform: rotate(-30deg);" />
+      <use href="#inner-tooth" style="transform: rotate(-90deg);" />
+      <use href="#inner-tooth" style="transform: rotate(-150deg);" />
+    </g>
+
+    <!-- Marks the center of the image for convenient reference -->
+    <!-- <circle id="center" r="1" class="accent-solid" /> -->
+  </g>
+
+  <style type="text/css">
+    :root {
+      --fg-color: #202020;
+      --bg-color: #e0e0e0;
+
+      --accent-ferris: rgb(247, 76, 0);
+      --accent-ferris-dark: rgb(165,43,0);
+      --accent-unsafe: #8f1f1d;
+
+      --accent-rf-orange: #F46623;
+    }
+
+    * {
+      shape-rendering: crispEdges;
+    }
+
+    #logo-square.sprocket-6 #inner-teeth-5 {
+      display: none;
+    }
+
+    #logo-square:not(.sprocket-6) #inner-teeth-6 {
+      display: none;
+    }
+
+    path {
+      stroke: transparent;
+      fill: transparent;
+      fill-rule: evenodd;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .fg-trace {
+      stroke: var(--fg-color);
+    }
+
+    .fg-solid {
+      fill: var(--fg-color);
+    }
+
+    .bg-trace {
+      stroke: var(--bg-color);
+    }
+
+    .bg-solid {
+      fill: var(--bg-color);
+    }
+
+    .accent-trace {
+      stroke: var(--accent-ferris);
+    }
+
+    .accent-solid {
+      fill: var(--accent-ferris);
+    }
+  </style>
+</svg>
