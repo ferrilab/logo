@@ -1,105 +1,79 @@
-<svg viewBox="-104 -104 208 208" xmlns="http://www.w3.org/2000/svg">
-  <g id="logo-square" class="sprocket-5">
-    <def>
-      <g id="chainring-base">
-        <path class="fg-trace fg-solid" d="
-          M 0 -80
-          A 80 80 0 0 1 0 80
-          A 80 80 0 0 1 0 -80
-          V -95
-          A 95 95 0 0 1 0 95
-          A 95 95 0 0 1 0 -95
-          Z
-          " />
-        <path class="bg-trace bg-solid" d="
-          M 0 -95
-          A 95 95 0 0 1 0 95
-          A 95 95 0 0 1 0 -95
-          V -104
-          A 104 104 0 0 1 0 104
-          A 104 104 0 0 1 0 -104
-          Z
-          " />
-      </g>
-      <g id="outer-tooth">
-        <path stroke-width="1" class="fg-trace fg-solid" style="transform: rotate(7.5deg);" d="
-          M -4 -100 a 1 1 0 0 1 8 0
-          l 2 10 h -12 l 2 -10
-          M 100 -4 a 1 1 0 0 1 0 8
-          l -10 2 v -12 l 10 2
-          M 4 100 a 1 1 0 0 1 -8 0
-          l -2 -10 h 12 l -2 10
-          M -100 4 a 1 1 0 0 1 0 -8
-          l 10 -2 v 12 l -10 -2
-          " />
-      </g>
-      <g id="outer-tooth-negative">
-        <path stroke-width="1" class="bg-trace bg-solid" style="transform: rotate(0deg);" d="
-          M -8 -98 a 8 8 0 0 0 16 0 Z
-          M 98 -8 a 8 8 0 0 0 0 16 Z
-          M 8 98 a 8 8 0 0 0 -16 0 Z
-          M -98 8 a 8 8 0 0 0 0 -16 Z
-          " />
-      </g>
-      <g id="inner-tooth">
-        <path class="fg-trace fg-solid" stroke-width="8" d="
-          M -12 -84 H 12 L 0 -72 Z
-          " />
-        <circle class="bg-solid" cy="-80" r="5.5" />
-      </g>
-    </def>
-
-    <g id="logo-main">
-      <!-- Fills the working area -->
-      <circle r="80" class="bg-trace bg-solid" />
-
+<svg version="1.1" viewBox="-106 -106 212 212" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <def>
+    <rect id="area" x="-106" y="-106" width="212" height="212" />
+    <circle id="hole" cy="-80" r="6" />
+    <circle id="ring" r="86" class="fg-stroke no-fill" stroke-width="18" />
+    <polygon id="tooth" class="fg-stroke fg-fill" stroke-width="6" points="92,6 102,0 92,-6" />
+    <polygon id="mount" class="fg-stroke fg-fill" stroke-width="12" points="-14,-84 0,-70 14,-84" />
+    <g id="holes">
+      <use xlink:href="#hole" fill="black" />
+      <use xlink:href="#hole" fill="black" transform="rotate(72)" />
+      <use xlink:href="#hole" fill="black" transform="rotate(144)" />
+      <use xlink:href="#hole" fill="black" transform="rotate(216)" />
+      <use xlink:href="#hole" fill="black" transform="rotate(288)" />
+    </g>
+    <g id="teeth">
+      <use xlink:href="#tooth" />
+      <use xlink:href="#tooth" transform="rotate(11.25)" />
+      <use xlink:href="#tooth" transform="rotate(22.50)" />
+      <use xlink:href="#tooth" transform="rotate(33.75)" />
+      <use xlink:href="#tooth" transform="rotate(45.00)" />
+      <use xlink:href="#tooth" transform="rotate(56.25)" />
+      <use xlink:href="#tooth" transform="rotate(67.50)" />
+      <use xlink:href="#tooth" transform="rotate(78.75)" />
+      <use xlink:href="#tooth" transform="rotate(90.00)" />
+      <use xlink:href="#tooth" transform="rotate(101.25)" />
+      <use xlink:href="#tooth" transform="rotate(112.50)" />
+      <use xlink:href="#tooth" transform="rotate(123.75)" />
+      <use xlink:href="#tooth" transform="rotate(135.00)" />
+      <use xlink:href="#tooth" transform="rotate(146.25)" />
+      <use xlink:href="#tooth" transform="rotate(157.50)" />
+      <use xlink:href="#tooth" transform="rotate(168.75)" />
+      <use xlink:href="#tooth" transform="rotate(180.00)" />
+      <use xlink:href="#tooth" transform="rotate(191.25)" />
+      <use xlink:href="#tooth" transform="rotate(202.50)" />
+      <use xlink:href="#tooth" transform="rotate(213.75)" />
+      <use xlink:href="#tooth" transform="rotate(225.00)" />
+      <use xlink:href="#tooth" transform="rotate(236.25)" />
+      <use xlink:href="#tooth" transform="rotate(247.50)" />
+      <use xlink:href="#tooth" transform="rotate(258.75)" />
+      <use xlink:href="#tooth" transform="rotate(270.00)" />
+      <use xlink:href="#tooth" transform="rotate(281.25)" />
+      <use xlink:href="#tooth" transform="rotate(292.50)" />
+      <use xlink:href="#tooth" transform="rotate(303.75)" />
+      <use xlink:href="#tooth" transform="rotate(315.00)" />
+      <use xlink:href="#tooth" transform="rotate(326.25)" />
+      <use xlink:href="#tooth" transform="rotate(337.50)" />
+      <use xlink:href="#tooth" transform="rotate(348.75)" />
+    </g>
+    <g id="mounts">
+      <use xlink:href="#mount" />
+      <use xlink:href="#mount" transform="rotate(72)" />
+      <use xlink:href="#mount" transform="rotate(144)" />
+      <use xlink:href="#mount" transform="rotate(216)" />
+      <use xlink:href="#mount" transform="rotate(288)" />
+    </g>
+  </def>
+  <mask id="mask-holes">
+    <use xlink:href="#area" fill="white" />
+    <use xlink:href="#holes" />
+  </mask>
+  <mask id="mask-inner">
+    <use xlink:href="#area" fill="black" />
+    <circle r="77" fill="white" />
+    <use xlink:href="#holes" />
+  </mask>
+  <g id="logo-square" class="textual">
+    <g id="logo-inner" mask="url(#mask-inner)">
       <!-- Your logo goes here -->
     </g>
-
-    <!-- Begins the chainring -->
-    <use href="#chainring-base" />
-
-    <!-- Fills the outward-facing spokes -->
-    <g id="outer-teeth">
-      <!-- These scoop out the edge of the chainring to make a nice rounded join -->
-      <use href="#outer-tooth-negative" />
-      <use href="#outer-tooth-negative" style="transform: rotate(15deg);" />
-      <use href="#outer-tooth-negative" style="transform: rotate(30deg);" />
-      <use href="#outer-tooth-negative" style="transform: rotate(45deg);" />
-      <use href="#outer-tooth-negative" style="transform: rotate(60deg);" />
-      <use href="#outer-tooth-negative" style="transform: rotate(75deg);" />
-      <!-- And these are the actual spokes -->
-      <use href="#outer-tooth" />
-      <use href="#outer-tooth" style="transform: rotate(15deg);" />
-      <use href="#outer-tooth" style="transform: rotate(30deg);" />
-      <use href="#outer-tooth" style="transform: rotate(45deg);" />
-      <use href="#outer-tooth" style="transform: rotate(60deg);" />
-      <use href="#outer-tooth" style="transform: rotate(75deg);" />
+    <g id="gear" mask="url(#mask-holes)">
+      <use xlink:href="#teeth" />
+      <use xlink:href="#ring" />
+      <use xlink:href="#mounts" />
     </g>
-
-    <!-- Pentagon (matching original Rust logo) -->
-    <g id="inner-teeth-5">
-      <use href="#inner-tooth" />
-      <use href="#inner-tooth" style="transform: rotate(72deg);" />
-      <use href="#inner-tooth" style="transform: rotate(144deg);" />
-      <use href="#inner-tooth" style="transform: rotate(-72deg);" />
-      <use href="#inner-tooth" style="transform: rotate(-144deg);" />
-    </g>
-
-    <!-- Wide Hexagon (allows full use of the x=0 Y-axis) -->
-    <g id="inner-teeth-6">
-      <use href="#inner-tooth" style="transform: rotate(30deg);" />
-      <use href="#inner-tooth" style="transform: rotate(90deg);" />
-      <use href="#inner-tooth" style="transform: rotate(150deg);" />
-      <use href="#inner-tooth" style="transform: rotate(-30deg);" />
-      <use href="#inner-tooth" style="transform: rotate(-90deg);" />
-      <use href="#inner-tooth" style="transform: rotate(-150deg);" />
-    </g>
-
-    <!-- Marks the center of the image for convenient reference -->
-    <!-- <circle id="center" r="1" class="accent-solid" /> -->
   </g>
-
   <style type="text/css">
     :root {
       --fg-color: #202020;
@@ -116,44 +90,38 @@
       shape-rendering: crispEdges;
     }
 
-    #logo-square.sprocket-6 #inner-teeth-5 {
-      display: none;
-    }
-
-    #logo-square:not(.sprocket-6) #inner-teeth-6 {
-      display: none;
-    }
-
-    path {
-      stroke: transparent;
-      fill: transparent;
+    path, polygon {
       fill-rule: evenodd;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
-    .fg-trace {
+    .fg-stroke {
       stroke: var(--fg-color);
     }
 
-    .fg-solid {
+    .fg-fill {
       fill: var(--fg-color);
     }
 
-    .bg-trace {
+    .bg-stroke {
       stroke: var(--bg-color);
     }
 
-    .bg-solid {
+    .bg-fill {
       fill: var(--bg-color);
     }
 
-    .accent-trace {
+    .accent-stroke {
       stroke: var(--accent-ferris);
     }
 
-    .accent-solid {
+    .accent-fill {
       fill: var(--accent-ferris);
+    }
+
+    .no-fill {
+      fill: none;
     }
   </style>
 </svg>

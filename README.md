@@ -1,21 +1,33 @@
 # Ferrilab Logo
 
-The logo is hand-written SVG. Some parts of it may be useful for other Rust
-projects.
+The logo is hand-written SVG, enclosed in [the Rust Project’s chainring art][0].
+
+## Ferrilab
+
+The Ferrilab project is composed of three crates:
+
+- `funty`, which provides generalizations over the Rust primitives
+- `radium`, which abstracts over different providers of shared mutability
+- `bitvec`, which provides bit-precision addressing
+
+It is actually a complete coïncidence that the project name, “Ferrilab”,
+contains the first letter of each of these crates. It is also a coïncidince that
+a potential fourth crate, `lilliputian`, uses the fourth consonant. But since an
+abbreviation of the project name is also an acronym of the project components,
+it felt very natural to use that as the text.
+
+The orange glyph is a modified voltage-transformer symbol. I felt it was
+appropriate, as all of these crates act like a semantic analogue to an
+electrical transformer: in exchange for a reduction of raw available power and
+capability, you gain increased flexibility and expressiveness.
+
+The font is [“Ferro Rosso”][1].
 
 ## Components
 
-The `base.svg` file is a 104px-square image containing an empty chainring and
-some predefined utilities for building your own logo. The interior space of the
-chainring is a circle with an 80px radius to the edge of the chainring and a
-72px radius to the tip of the inner mounting sprockets. The annulus from 72px to
-80px is open for use, but the marked area for inserting your logo will be
-overdrawn by the mounting sprockets.
-
-You can select either five sprockets (matching the Rust logo) or six (arranged
-in a wide regular hexagon: sprockets at the equator and at 60deg latitude each
-direction) by removing or adding the `sprockets-6` class to the `#logo-square`
-element.
+The `base.svg` file is a copy of the Rust chainring, vendored here for
+convenience. It is extended with some support items for rapidly beginning an
+interior logo.
 
 The utility classes `.{fg,bg,accent}-{trace,solid}` provide three colors of
 outer stroke and inner fill, respectively. The `fg` color is near-black, the
@@ -23,18 +35,9 @@ outer stroke and inner fill, respectively. The `fg` color is near-black, the
 Orange. Three other oranges are also provided, sampled from the Ferris logos on
 <https://rustacean.net>.
 
-## Why Doesn’t It Look Exactly Like The Rust Logo?
-
-The only available asset for the Rust logo is a machine-written SVG file that
-is only broken into two components, and unfortunately they are *not* the
-chainring and the Big R, so I had to build this from scratch. I elected to make
-the spokes look slightly more like the bicycle chainring images I found by
-searching for the term (scooped instead of triangular edges), and use 24 instead
-of 32 to make them slightly more visually apparent at small sizes.
-
 ## How Can I Use It?
 
-The SVG co-ordinate space runs from `-104 -104` in the top left to `104 104` in
+The SVG co-ordinate space runs from `-106 -106` in the top left to `106 106` in
 the bottom right. `0 0` is at the exact center of the image, and there is a
 commented-out `<circle r="1" />` element left in the file that you can enable to
 get a visual reference.
@@ -78,14 +81,19 @@ images into a `.ico` bundle.
    favicon.
 
 If you want to render and resize on the command-line instead of the browser, you
-can use [this StackOverflow answer][0]. I haven’t tried it with this SVG file
+can use [this StackOverflow answer][2]. I haven’t tried it with this SVG file
 and don’t care to.
 
 ## Licensing
 
-This README and `base.svg` are CC0. `ferrilab.svg` is CC BY-NC-ND. Use of the
-Ferrilab logo is permitted with the requirement that your copy-text clearly
-indicates that you are referring *to* the Ferrilab project, and not representing
-yourself *as part of* the Ferrilab project.
+- `base.svg` is CC-BY. The visual artifact and the original SVG code that
+  produces it are provided by the Rust Foundation. The SVG text provided here
+  was modified by the Ferrilab Project.
+- `README.md` is CC-BY, written by the Ferrilab Project.
+- `ferrilab.svg` is CC BY-NC-ND. Use of the Ferrilab logo is permitted with the
+  requirement that your copy-text clearly indicates that you are referring *to*
+  the Ferrilab project, and not representing yourself *as part of* the Ferrilab project.
 
-[0]: https://stackoverflow.com/questions/39256104/how-to-convert-an-image-file-from-svg-to-a-multi-size-ico-without-blur-sharp
+[0]: https://github.com/rust-lang/rust-artwork/blob/master/logo/rust-logo-gear-only.svg
+[1]: https://www.1001fonts.com/ferro-rosso-font.html
+[2]: https://stackoverflow.com/questions/39256104/how-to-convert-an-image-file-from-svg-to-a-multi-size-ico-without-blur-sharp

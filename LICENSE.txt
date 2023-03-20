@@ -1,11 +1,11 @@
-The file `base.svg` is licensed under the Creative Commons Public Domain
-Dedication (CC0). Please use it freely.
+The file `base.svg` is licensed by the Rust Foundation under the Creative
+Commons Attribution By-Attribution (CC BY) 4.0 International License.
 
 The file `ferrilab.svg` is wholly owned by Alexander Payne ("myrrlyn").
-It is licensed under the Creative Commons By-Attribution,
-Non-Commercial, No-Derivatives (CC BY-NC-ND). You may use this logo in
-your own work when you are discussing the Ferrilab project in any way.
-You may not use it to represent yourself or your work as being part of
+It is licensed by him under the Creative Commons By-Attribution,
+Non-Commercial, No-Derivatives (CC BY-NC-ND) 4.0 International License. You may
+use this logo in your own work when you are discussing the Ferrilab project in
+any way. You may not use it to represent yourself or your work as being part of
 the Ferrilab project.
 
 The remainder of this document is the text of the CC BY-NC-ND license.
