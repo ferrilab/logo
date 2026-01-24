@@ -1,0 +1,73 @@
+<svg version="1.1" viewBox="0 -116 136 136" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- <rect x="0" y="-116" width="136" height="136" fill="lightgrey" />
+  <rect x="0" y="-116" width="136" height="12" fill="green" />
+  <rect x="0" y="8" width="136" height="12" fill="green" /> -->
+  <g id="main">
+    <path class="pen-sq stroke-fg" d="
+      M 12 0
+      l 0 -72 l 24 0 m -24 0 l 0 -24 l 48 0 m -48 96
+      m 24 0 l 0 -48 l 24 0
+      m 0 48
+      m 24 -96 l 0 96 l 24 0 l 0 -48 l -24 0
+      " />
+    <path class="pen-sq stroke-accent" d="
+      M 60 -72 l 0 0
+      m 0 48 l 0 24
+      " />
+  </g>
+  <style type="text/css">
+    :root {
+      --fg-color: #202020;
+      --bg-color: #e0e0e0;
+
+      --accent-ferris: rgb(247, 76, 0);
+      --accent-ferris-dark: rgb(165, 43, 0);
+      --accent-unsafe: #8f1f1d;
+
+      --accent-rf-orange: #F46623;
+
+      --accent1-color: var(--risd-blue);
+      --accent2-color: var(--aero-orange);
+
+      --risd-blue: #2454ff;
+      --aero-orange: #ff4f00;
+      --safety-orange: #ff7900;
+
+      --tuning-orange: var(--aero-orange);
+      --accent-blue: #0070ff;
+    }
+
+    * {
+      shape-rendering: crispEdges;
+    }
+
+    svg {
+      --dim: 1024px;
+      height: var(--dim);
+      width: var(--dim);
+    }
+
+    .stroke-fg { stroke: black; }
+    @media (prefers-color-scheme: dark) {
+      .stroke-fg { stroke: white; }
+    }
+    .stroke-accent { stroke: #ff4f00; }
+
+    #main {
+      transform: skewX(-18deg);
+    }
+
+    path {
+      fill: none;
+      stroke-width: 16px;
+      stroke-linecap: square;
+    }
+    .pen-sq {
+      stroke-linejoin: miter;
+    }
+    .pen-bv {
+      stroke-linejoin: bevel;
+    }
+  </style>
+</svg>

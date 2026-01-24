@@ -1,0 +1,45 @@
+<svg version="1.1" viewBox="0 -80 520 112" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- <rect x="0" y="-80" width="520" height="112" fill="lightgrey" /> -->
+  <g id="main">
+    <path class="pen-sq stroke-fg" d="
+      M 19 24 l 0 -72 l 24 0 l 0 48 l -24 0
+      m 48 0 l 0 -48 l 24 0 l 0 48 l -24 0
+      m 48 0 l 0 -48
+      m 24 48 l 0 -48 l 24 0 l 0 48
+      m 44 0 l -10 0 l 0 -48 l 18 0 l -36 0 l 18 0 l 0 -24
+      m 60 24 l -24 0 l 0 48 l 24 0 l 0 -72
+      m 24 48 l 24 0 l 0 -24 l -24 0 l 0 48 l 24 0
+      m 24 0 l 0 -12 l 24 -24 l 0 -12 m -24 0 l 0 12 l 24 24 l 0 12
+      m 44 0 l -10 0 l 0 -48 l 18 0 l -36 0 l 18 0 l 0 -24
+      m 34 48 l 24 0 l 0 -24 l -24 0 l 0 48 l 24 0
+      m 24 0 l 0 -48 l 24 0
+      " />
+    <path class="pen-sq stroke-accent" d="M 19 -72 m 96 0 l 0 0" />
+  </g>
+  <style type="text/css">
+    .stroke-fg { stroke: black; }
+    @media (prefers-color-scheme: dark) {
+      .stroke-fg { stroke: white; }
+    }
+    .stroke-accent { stroke: #ff4f00; }
+    svg {
+      height: 512px;
+    }
+    #main {
+      transform: skewX(-18deg);
+    }
+    path {
+      fill: none;
+      stroke-width: 16px;
+      stroke-linecap: square;
+    }
+    .pen-sq {
+      stroke-linejoin: miter;
+    }
+    .pen-bv {
+      stroke-linejoin: bevel;
+    }
+  </style>
+</svg>
+<!-- pointdexter -->
